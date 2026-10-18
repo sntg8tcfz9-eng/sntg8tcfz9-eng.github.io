@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MATIÈRE — Founding List</title>
+<meta name="description" content="Materials matter. Join the MATIÈRE founding list for first access.">
+<meta name="theme-color" content="#f3e9d2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f3e9d2;--brown:#40220e;--wine:#561f25;--red:#e73113;--grey:#534c47;--sand:#b49b80;--olive:#59543a}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--cream);color:var(--brown)}
+body{font-family:system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif}
+a{color:var(--brown)}a:hover{color:var(--wine)}
+.page{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden}
+.blobs{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.blob{position:absolute;width:55vmax;height:55vmax;border-radius:50%;filter:blur(70px)}
+.b1{top:-20vmax;left:-15vmax;background:var(--sand);opacity:.45;animation:drift-a 18s ease-in-out infinite alternate}
+.b2{bottom:-30vmax;right:-20vmax;background:var(--red);opacity:.22;animation:drift-b 22s ease-in-out infinite alternate}
+.b3{bottom:-25vmax;left:-10vmax;background:var(--olive);opacity:.22;animation:drift-c 26s ease-in-out infinite alternate}
+main{position:relative;z-index:1;flex-grow:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:48px 16px;text-align:center}
+h1{margin:0;display:flex;font-family:'Barriecito',system-ui,sans-serif;font-weight:400;font-size:clamp(64px,19vw,220px);line-height:.9;color:var(--red);user-select:none}
+.l{display:inline-block;animation:rise .8s cubic-bezier(.2,.8,.2,1) backwards;transition:transform .3s}
+.l:hover{transform:translateY(-10%) rotate(-4deg)}
+.tag{margin:0;font-size:18px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;animation:fade .8s .7s backwards}
+form{width:min(460px,100%);animation:fade .8s .9s backwards}
+.field{display:flex;align-items:center;gap:6px;padding:6px 6px 6px 24px;border:1.5px solid var(--brown);border-radius:999px;background:rgba(243,233,210,.7)}
+.field:focus-within{box-shadow:0 0 0 4px rgba(231,49,19,.25)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+input{flex:1;min-width:0;height:52px;border:0;background:transparent;outline:none;color:var(--brown);font:400 17px/24px system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif}
+input::placeholder{color:var(--grey)}
+.go{flex:none;width:56px;height:56px;border:0;border-radius:50%;display:grid;place-items:center;background:var(--wine);color:var(--cream);cursor:pointer;transition:background .25s,transform .25s}
+.go:hover{background:var(--red);transform:rotate(-12deg) scale(1.06)}
+.go:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.go:disabled{opacity:.6;cursor:wait;transform:none}
+.note{margin:14px 0 0;font-size:13px;color:var(--grey)}
+.note.err{color:#a3200b;font-weight:600}
+.done{display:flex;flex-direction:column;align-items:center;gap:10px;animation:pop .6s cubic-bezier(.2,1.4,.4,1) both}
+.done strong{font-family:'Barriecito',system-ui,sans-serif;font-weight:400;font-size:56px;line-height:1;color:var(--wine)}
+.done span{font-size:16px}
+[hidden]{display:none !important}
+.ticker{position:relative;z-index:1;overflow:hidden;background:var(--wine);color:var(--cream);padding:14px 0}
+.track{display:flex;width:max-content;animation:scroll 28s linear infinite;font-size:13px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;white-space:nowrap}
+.track span{padding:0 28px}
+@keyframes drift-a{to{transform:translate(18vw,14vh) scale(1.15)}}
+@keyframes drift-b{to{transform:translate(-16vw,-12vh) scale(1.1)}}
+@keyframes drift-c{to{transform:translate(20vw,-18vh) scale(.9)}}
+@keyframes rise{from{opacity:0;transform:translateY(40%) rotate(-6deg)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:none}}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition:none !important}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="blobs" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+  <main>
+    <h1 aria-label="MATIÈRE"><span class="l" style="animation-delay:.05s">M</span><span class="l" style="animation-delay:.12s">A</span><span class="l" style="animation-delay:.19s">T</span><span class="l" style="animation-delay:.26s">I</span><span class="l" style="animation-delay:.33s">È</span><span class="l" style="animation-delay:.40s">R</span><span class="l" style="animation-delay:.47s">E</span></h1>
+    <p class="tag">Materials matter</p>
+
+    <form id="signup" novalidate>
+      <div class="field">
+        <label for="email" class="sr">Email</label>
+        <input id="email" type="email" name="email" required autocomplete="email" inputmode="email" placeholder="Your email to get first access">
+        <button type="submit" class="go" id="go" aria-label="Join the founding list">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <p class="note" id="note" role="status" aria-live="polite">Join the founding list.</p>
+    </form>
+
+    <div class="done" id="done" hidden>
+      <strong tabindex="-1" id="done-title">You're in.</strong>
+      <span>Your welcome email is on its way.</span>
+    </div>
+  </main>
+
+  <div class="ticker" aria-hidden="true"><div class="track" id="track"></div></div>
+</div>
+
+<script>
+// Signups go to the same Klaviyo list as the website waitlist, so the same
+// welcome flow (WWst3X, "Added to List") fires. If the waitlist is ever moved
+// to another list (e.g. the planned merge into SHcCJ3), update LIST_ID here.
+const COMPANY_ID = 'RnydHD';      // Klaviyo public site key (safe to expose)
+const LIST_ID = 'WR4nCQ';         // Founding List · Website
+const SOURCE = 'Instagram link in bio';
+
+const words = ['MATIÈRE', 'Natural materials', 'MATIÈRE', 'Materials matter', 'MATIÈRE', 'Real things grow'];
+document.getElementById('track').innerHTML =
+  words.concat(words).map(w => '<span>' + w + '</span>').join('');
+
+const form = document.getElementById('signup');
+const input = document.getElementById('email');
+const button = document.getElementById('go');
+const note = document.getElementById('note');
+
+function say(text, isError) {
+  note.textContent = text;
+  note.classList.toggle('err', !!isError);
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const email = input.value.trim();
+  if (!input.checkValidity() || !email) {
+    say('Please enter a valid email.', true);
+    input.focus();
+    return;
+  }
+  button.disabled = true;
+  say('Joining…');
+  try {
+    const res = await fetch('https://a.klaviyo.com/client/subscriptions/?company_id=' + COMPANY_ID, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/vnd.api+json', 'revision': '2024-10-15' },
+      body: JSON.stringify({
+        data: {
+          type: 'subscription',
+          attributes: {
+            custom_source: SOURCE,
+            profile: { data: { type: 'profile', attributes: { email } } }
+          },
+          relationships: { list: { data: { type: 'list', id: LIST_ID } } }
+        }
+      })
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    form.hidden = true;
+    document.getElementById('done').hidden = false;
+    document.getElementById('done-title').focus();
+  } catch (err) {
+    say('Something went wrong. Please try again.', true);
+    button.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
